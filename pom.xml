@@ -70,6 +70,13 @@
 			<version>3.3.4</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>4.1.3</version>
+		</dependency>
+
 		<!-- Auth dependencies -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>

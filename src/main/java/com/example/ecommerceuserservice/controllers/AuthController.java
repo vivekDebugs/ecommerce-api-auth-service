@@ -5,7 +5,6 @@ import com.example.ecommerceuserservice.dtos.LogInResponseDTO;
 import com.example.ecommerceuserservice.dtos.SignUpRequestDTO;
 import com.example.ecommerceuserservice.dtos.SignUpResponseDTO;
 import com.example.ecommerceuserservice.services.AuthService;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
@@ -88,5 +87,13 @@ public class AuthController {
             httpStatus = HttpStatus.FORBIDDEN;
         }
         return new ResponseEntity<>(response, httpStatus);
+    }
+
+    @GetMapping("/fake_validate")
+    public Boolean fakeValidate() {
+        if (Math.random() > 0.5) {
+            return true;
+        }
+        return false;
     }
 }
